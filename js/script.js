@@ -6,6 +6,9 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
+
+
  atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
@@ -47,5 +50,9 @@ function aleatorio (lista){
     const posicao = Math.floor(Math.random()* lista.length);
     return lista[posicao];
 }
-
+function jogaNovamente(){
+atual = 0;
+historiaFinal = "";
+mostraPergunta();
+}
 mostraPergunta();

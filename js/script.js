@@ -44,6 +44,8 @@ function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+    caixaResultado.classlist.add("mostrar");
+botaoJogarnovamente.addEventListener("click", jogaNovamente);
 }
 
 function aleatorio (lista){
@@ -53,6 +55,7 @@ function aleatorio (lista){
 function jogaNovamente(){
 atual = 0;
 historiaFinal = "";
+caixaResultado.classlist.remove("mostrar");
 mostraPergunta();
 }
 mostraPergunta();
